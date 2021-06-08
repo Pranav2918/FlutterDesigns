@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'Design1.dart';
 import 'Design2.dart';
 import 'Design3.dart';
+import 'Design4.dart';
 
 Widget profileDesign(BuildContext context) {
   return Container(
@@ -92,6 +93,29 @@ Widget profileDesign(BuildContext context) {
                     child: Center(
                       child: Text(
                         'Design 3',
+                        style: TextStyle(fontSize: 14, color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Design4()));
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Color.fromRGBO(0, 204, 24, 0.9),
+                        borderRadius: BorderRadius.circular(8)),
+                    margin: EdgeInsets.only(right: 15, bottom: 15),
+                    height: 40,
+                    width: MediaQuery.of(context).size.width / 2,
+                    child: Center(
+                      child: Text(
+                        'Design 4',
                         style: TextStyle(fontSize: 14, color: Colors.white),
                       ),
                     ),

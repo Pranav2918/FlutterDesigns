@@ -1,9 +1,6 @@
 import 'package:designs/Screens/Lists/List.dart';
 import 'package:designs/Screens/Profile/Profile.dart';
 import 'package:flutter/material.dart';
-import 'Profile/Design1.dart';
-import 'Profile/Design2.dart';
-import 'Profile/Design3.dart';
 
 class Main extends StatefulWidget {
   @override
@@ -34,8 +31,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            'Designs',
-            style: TextStyle(fontSize: 14),
+            'Design Adda',
+            style: TextStyle(fontSize: 18),
           ),
         ),
         body: Column(
