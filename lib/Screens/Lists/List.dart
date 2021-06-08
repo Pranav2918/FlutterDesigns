@@ -1,5 +1,6 @@
 import 'package:designs/Screens/Lists/Design1.dart';
 import 'package:flutter/material.dart';
+import 'Design3.dart';
 import 'Desing2.dart';
 
 Widget listDesigns(BuildContext context) {
@@ -79,7 +80,10 @@ Widget listDesigns(BuildContext context) {
               Align(
                 alignment: Alignment.centerLeft,
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Places()));
+                  },
                   child: Container(
                     decoration: BoxDecoration(
                         color: Color.fromRGBO(255, 0, 21, 0.9),
