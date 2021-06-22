@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:cached_network_image/cached_network_image.dart';
 
 class SchoolList extends StatefulWidget {
   static final String path = "lib/src/pages/lists/list2.dart";

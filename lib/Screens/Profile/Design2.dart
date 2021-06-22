@@ -1,12 +1,12 @@
 import 'package:designs/Screens/MainScreen.dart';
 import 'package:flutter/material.dart';
 
-class Design2 extends StatefulWidget {
+class ProfileDesign2 extends StatefulWidget {
   @override
-  _Design2State createState() => _Design2State();
+  _ProfileDesign2State createState() => _ProfileDesign2State();
 }
 
-class _Design2State extends State<Design2> {
+class _ProfileDesign2State extends State<ProfileDesign2> {
   bool _val1 = false;
   bool _val2 = false;
 

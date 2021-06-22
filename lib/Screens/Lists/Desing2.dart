@@ -1,5 +1,5 @@
 import 'package:designs/Screens/MainScreen.dart';
-import 'package:designs/Screens/Profile/Design2.dart';
+
 import 'package:flutter/material.dart';
 
 class Grid extends StatelessWidget {

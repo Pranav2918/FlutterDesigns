@@ -1,5 +1,6 @@
 import 'package:designs/Screens/Lists/List.dart';
 import 'package:designs/Screens/Profile/Profile.dart';
+import 'package:designs/Screens/login/Login.dart';
 import 'package:flutter/material.dart';
 
 class Main extends StatefulWidget {
@@ -35,8 +36,14 @@ class _HomePageState extends State<HomePage> {
             style: TextStyle(fontSize: 18),
           ),
         ),
-        body: Column(
-          children: [profileDesign(context), listDesigns(context)],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              profileDesign(context),
+              listDesigns(context),
+              loginDesigns(context)
+            ],
+          ),
         ));
   }
 }

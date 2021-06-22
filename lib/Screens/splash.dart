@@ -14,8 +14,7 @@ Widget splashScreen() {
                   width: 200,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: NetworkImage(
-                              'https://t3.ftcdn.net/jpg/03/11/82/20/360_F_311822099_rnFbbp9Cca68DnC0hOVVLxvRqDwJ8oOq.jpg')))),
+                          image: AssetImage('assets/logo.jpg')))),
               SizedBox(height: 39.5),
               Container(
                   child: Text(

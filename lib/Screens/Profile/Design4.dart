@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Design4 extends StatelessWidget {
+class ProfileDesign4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

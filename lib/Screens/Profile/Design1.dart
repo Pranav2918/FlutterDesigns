@@ -1,12 +1,12 @@
 import 'package:designs/Screens/MainScreen.dart';
 import 'package:flutter/material.dart';
 
-class Design1 extends StatefulWidget {
+class ProfileDesign1 extends StatefulWidget {
   @override
-  _Design1State createState() => _Design1State();
+  _ProfileDesign1State createState() => _ProfileDesign1State();
 }
 
-class _Design1State extends State<Design1> {
+class _ProfileDesign1State extends State<ProfileDesign1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
