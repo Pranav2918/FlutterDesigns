@@ -1,3 +1,4 @@
+import 'package:designs/Screens/Grid/MainGrid.dart';
 import 'package:designs/Screens/Lists/List.dart';
 import 'package:designs/Screens/Profile/Profile.dart';
 import 'package:designs/Screens/login/Login.dart';
@@ -41,7 +42,8 @@ class _HomePageState extends State<HomePage> {
             children: [
               profileDesign(context),
               listDesigns(context),
-              loginDesigns(context)
+              loginDesigns(context),
+              gridDesign(context)
             ],
           ),
         ));
