@@ -1,16 +1,9 @@
-# designs
+# Collection of designs
 
-A new Flutter project.
+- This is the Major collection of my designing.
 
-## Getting Started
+### Some of them
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src = "travel1.png" heigh="500em"/> <img src = "travel2.png" heigh="500em"/>
+<img src = "main.png" heigh="500em"/> <img src = "list.png" heigh="500em"/>
+<img src = "profile.png" heigh="500em"/> <img src = "auth.png" heigh="500em"/>
