@@ -1,5 +1,6 @@
 import 'package:designs/Screens/Grid/MainGrid.dart';
 import 'package:designs/Screens/Lists/List.dart';
+import 'package:designs/Screens/Location/mainLocation.dart';
 import 'package:designs/Screens/Profile/Profile.dart';
 import 'package:designs/Screens/login/Login.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +44,8 @@ class _HomePageState extends State<HomePage> {
               profileDesign(context),
               listDesigns(context),
               loginDesigns(context),
-              gridDesign(context)
+              gridDesign(context),
+              travelDesign(context)
             ],
           ),
         ));
