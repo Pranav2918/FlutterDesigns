@@ -42,7 +42,7 @@ Widget profileDesign(BuildContext context) {
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Design 1',
+                        'Dating Profile',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
@@ -70,7 +70,7 @@ Widget profileDesign(BuildContext context) {
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Design 2',
+                        'Profile Settings',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
@@ -99,7 +99,7 @@ Widget profileDesign(BuildContext context) {
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Design 3',
+                        'Social Profile',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
@@ -127,7 +127,7 @@ Widget profileDesign(BuildContext context) {
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Design 4',
+                        'Freelancer Profile',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,

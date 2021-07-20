@@ -39,7 +39,7 @@ Widget loginDesigns(BuildContext context) {
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Design 1',
+                        'Social Login',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
@@ -68,7 +68,7 @@ Widget loginDesigns(BuildContext context) {
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Design 2',
+                        'Application Login',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
@@ -98,7 +98,7 @@ Widget loginDesigns(BuildContext context) {
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Design 3',
+                        'E-commerce Login',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,

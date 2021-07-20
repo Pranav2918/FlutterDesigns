@@ -1,3 +1,4 @@
+import 'package:designs/Screens/CustomWidgets/Widgets.dart';
 import 'package:designs/Screens/Lists/List.dart';
 import 'package:designs/Screens/Location/Travel.dart';
 import 'package:designs/Screens/Profile/Profile.dart';
@@ -43,7 +44,8 @@ class _HomePageState extends State<HomePage> {
               profileDesign(context),
               listDesigns(context),
               loginDesigns(context),
-              travelDesign(context)
+              travelDesign(context),
+              customWidgets(context)
             ],
           ),
         ));

@@ -24,7 +24,7 @@ Widget travelDesign(BuildContext context) {
                 alignment: Alignment.centerLeft,
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => Design1(),
@@ -39,7 +39,7 @@ Widget travelDesign(BuildContext context) {
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Desin 1',
+                        'Travel Guide',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
@@ -69,7 +69,7 @@ Widget travelDesign(BuildContext context) {
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Design 2',
+                        'Place Info',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,

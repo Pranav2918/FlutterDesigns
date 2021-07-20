@@ -40,7 +40,7 @@ Widget listDesigns(BuildContext context) {
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Design 1',
+                        'School List',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
@@ -69,7 +69,7 @@ Widget listDesigns(BuildContext context) {
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Design 2',
+                        'Image Grid',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
@@ -96,7 +96,7 @@ Widget listDesigns(BuildContext context) {
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Design 3',
+                        'Place List',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
