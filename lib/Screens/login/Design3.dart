@@ -11,7 +11,8 @@ class LoginDesign3 extends StatelessWidget {
               height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('assets/bg.jpg'), fit: BoxFit.cover))),
+                      image: AssetImage('assets/images/bg.jpg'),
+                      fit: BoxFit.cover))),
           Container(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,

@@ -14,7 +14,7 @@ Widget splashScreen() {
                   width: 200,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/logo.jpg')))),
+                          image: AssetImage('assets/images/logo.jpg')))),
               SizedBox(height: 39.5),
               Container(
                   child: Text(
