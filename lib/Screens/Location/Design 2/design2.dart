@@ -1,9 +1,10 @@
 import 'package:designs/Screens/Location/Design%202/carousel.dart';
+import 'package:designs/Screens/Location/Design%202/placepopup.dart';
 import 'package:flutter/material.dart';
 
 class Design2 extends StatelessWidget {
   final String img =
-      "https://images.unsplash.com/photo-1492584328860-c0c7bb599679?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG5lcGFsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60";
+      "https://images.unsplash.com/photo-1586100345684-a135906ef03c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fG5lcGFsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -49,7 +50,7 @@ class Design2 extends StatelessWidget {
                   Text('Top Rated'.toUpperCase(),
                       style: TextStyle(
                           fontSize: 25,
-                          color: Color.fromRGBO(255, 0, 21, 0.9),
+                          color: Colors.white,
                           fontWeight: FontWeight.bold)),
                   SizedBox(height: 8),
                   Container(
@@ -74,7 +75,8 @@ class Design2 extends StatelessWidget {
                   Wrap(
                     runAlignment: WrapAlignment.center,
                     alignment: WrapAlignment.center,
-                    spacing: 10.0,
+                    spacing: 20.0,
+                    
                     children: <Widget>[
                       Chip(
                           backgroundColor: Color.fromRGBO(255, 0, 21, 0.9),
@@ -100,12 +102,26 @@ class Design2 extends StatelessWidget {
                       )),
                       Chip(
                           label: Text(
+                        'Butwal'.toUpperCase(),
+                      )),
+                       Chip(
+                          label: Text(
                         'Annapurna'.toUpperCase(),
                       )),
-                      Chip(
-                          backgroundColor: Colors.blue,
-                          label: Text('+ 10 more'.toUpperCase(),
-                              style: TextStyle(color: Colors.white)))
+                      GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet(
+                            context: context,
+                            builder: (context) {
+                              return PlacePopup();
+                            },
+                          );
+                        },
+                        child: Chip(
+                            backgroundColor: Colors.blue,
+                            label: Text('+ 6 more'.toUpperCase(),
+                                style: TextStyle(color: Colors.white))),
+                      )
                     ],
                   ),
                   GestureDetector(
