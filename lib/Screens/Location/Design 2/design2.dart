@@ -76,7 +76,6 @@ class Design2 extends StatelessWidget {
                     runAlignment: WrapAlignment.center,
                     alignment: WrapAlignment.center,
                     spacing: 20.0,
-                    
                     children: <Widget>[
                       Chip(
                           backgroundColor: Color.fromRGBO(255, 0, 21, 0.9),
@@ -104,7 +103,7 @@ class Design2 extends StatelessWidget {
                           label: Text(
                         'Butwal'.toUpperCase(),
                       )),
-                       Chip(
+                      Chip(
                           label: Text(
                         'Annapurna'.toUpperCase(),
                       )),
@@ -132,7 +131,7 @@ class Design2 extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.black,
                           borderRadius: BorderRadius.circular(12)),
-                      margin: EdgeInsets.only(top: 25),
+                      margin: EdgeInsets.only(top: 25, bottom: 15),
                       height: 40,
                       width: 100,
                       child: Center(

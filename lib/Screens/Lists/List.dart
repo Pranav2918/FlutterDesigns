@@ -98,7 +98,7 @@ Widget listDesigns(BuildContext context) {
                       child: Text(
                         'Design 3',
                         style: TextStyle(
-                            fontSize: 14,
+                            fontSize: 16,
                             color: Colors.white,
                             letterSpacing: 1.0),
                       ),

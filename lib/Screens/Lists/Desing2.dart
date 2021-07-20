@@ -88,6 +88,7 @@ class _GridDesignState extends State<GridDesign> {
               Container(
                   child: GridView.count(
                 shrinkWrap: true,
+                primary: false,
                 crossAxisCount: 2,
                 mainAxisSpacing: 10,
                 crossAxisSpacing: 10,
