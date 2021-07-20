@@ -17,7 +17,7 @@ class ProfileDesign3 extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 3,
+              height: MediaQuery.of(context).size.height / 3.5,
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.centerLeft,
@@ -85,67 +85,12 @@ class ProfileDesign3 extends StatelessWidget {
                     'Actress, USA',
                     style: TextStyle(fontSize: 14, color: Colors.white),
                   ),
-                  Container(
-                    margin: EdgeInsets.only(top: 28),
-                    child: Row(
-                      children: [
-                        Container(
-                          alignment: Alignment.bottomLeft,
-                          width: MediaQuery.of(context).size.width / 2,
-                          height: 80,
-                          color: Colors.red[200],
-                          child: Center(
-                              child: Container(
-                            margin: EdgeInsets.only(top: 20),
-                            child: Column(
-                              children: [
-                                Text(
-                                  '123456',
-                                  style: TextStyle(
-                                      fontSize: 22, color: Colors.white),
-                                ),
-                                Text(
-                                  'Followers',
-                                  style: TextStyle(
-                                      fontSize: 12, color: Colors.white),
-                                )
-                              ],
-                            ),
-                          )),
-                        ),
-                        Container(
-                            alignment: Alignment.bottomLeft,
-                            width: MediaQuery.of(context).size.width / 2,
-                            height: 80,
-                            color: Colors.red,
-                            child: Center(
-                              child: Container(
-                                margin: EdgeInsets.only(top: 20),
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      '1',
-                                      style: TextStyle(
-                                          fontSize: 22, color: Colors.white),
-                                    ),
-                                    Text(
-                                      'Following',
-                                      style: TextStyle(
-                                          fontSize: 12, color: Colors.white),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            )),
-                      ],
-                    ),
-                  )
                 ],
               ),
             ),
             Container(
               alignment: Alignment.bottomLeft,
-              margin: EdgeInsets.only(top: 20, left: 15),
+              margin: EdgeInsets.only(top: 10, left: 15),
               child: Text('Email',
                   style: TextStyle(color: Colors.red, fontSize: 14)),
             ),
