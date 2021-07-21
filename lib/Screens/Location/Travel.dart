@@ -49,32 +49,29 @@ Widget travelDesign(BuildContext context) {
                   ),
                 ),
               ),
-              Align(
-                alignment: Alignment.centerRight,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Design2(),
-                        ));
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Color.fromRGBO(0, 204, 24, 0.9),
-                        borderRadius: BorderRadius.circular(8)),
-                    margin: EdgeInsets.only(
-                        right: 15, top: 15, left: 15, bottom: 15),
-                    height: 40,
-                    width: MediaQuery.of(context).size.width,
-                    child: Center(
-                      child: Text(
-                        'Place Info',
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                            letterSpacing: 1.0),
-                      ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Design2(),
+                      ));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Color.fromRGBO(0, 204, 24, 0.9),
+                      borderRadius: BorderRadius.circular(8)),
+                  margin:
+                      EdgeInsets.only(right: 15, top: 15, left: 15, bottom: 15),
+                  height: 40,
+                  width: MediaQuery.of(context).size.width,
+                  child: Center(
+                    child: Text(
+                      'Place Info',
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          letterSpacing: 1.0),
                     ),
                   ),
                 ),

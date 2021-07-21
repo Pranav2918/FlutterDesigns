@@ -34,8 +34,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            'Design Adda',
-            style: TextStyle(fontSize: 18),
+            'Sea of Designs',
+            style: TextStyle(letterSpacing: 1.0, fontSize: 18,fontWeight:FontWeight.w300),
           ),
         ),
         body: SingleChildScrollView(

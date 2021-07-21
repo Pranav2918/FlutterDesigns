@@ -202,7 +202,7 @@ class _ProfileDesign1State extends State<ProfileDesign1> {
                   gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      colors: [Colors.pink[300], Colors.pink[800]])),
+                      colors: [Colors.pink.shade300, Colors.pink.shade800])),
               child: Center(
                 child: Text(
                   'Like Me!',

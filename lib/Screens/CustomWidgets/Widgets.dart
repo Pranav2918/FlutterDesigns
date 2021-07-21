@@ -1,3 +1,4 @@
+import 'package:designs/Screens/CustomWidgets/animated_profile.dart';
 import 'package:designs/Screens/CustomWidgets/toggleSwitch.dart';
 import 'package:flutter/material.dart';
 
@@ -19,32 +20,55 @@ Widget customWidgets(BuildContext context) {
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => CustomToggle(),
-                            ));
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(0, 204, 24, 0.9),
-                            borderRadius: BorderRadius.circular(8)),
-                        margin:
-                            EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                        height: 40,
-                        width: MediaQuery.of(context).size.width,
-                        child: Center(
-                          child: Text(
-                            'Custom Toggle Switch',
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                                letterSpacing: 1.0),
-                          ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CustomToggle(),
+                          ));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Color.fromRGBO(0, 204, 24, 0.9),
+                          borderRadius: BorderRadius.circular(8)),
+                      margin: EdgeInsets.only(left: 15, right: 15),
+                      height: 40,
+                      width: MediaQuery.of(context).size.width,
+                      child: Center(
+                        child: Text(
+                          'Custom Toggle Switch',
+                          style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                              letterSpacing: 1.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AnimatedProfile(),
+                          ));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Color.fromRGBO(0, 204, 24, 0.9),
+                          borderRadius: BorderRadius.circular(8)),
+                      margin:
+                          EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                      height: 40,
+                      width: MediaQuery.of(context).size.width,
+                      child: Center(
+                        child: Text(
+                          'Animated Profile Picture',
+                          style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                              letterSpacing: 1.0),
                         ),
                       ),
                     ),

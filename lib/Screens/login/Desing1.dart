@@ -15,7 +15,7 @@ class LoginDesign1 extends StatelessWidget {
                       gradient: LinearGradient(
                           begin: Alignment.topRight,
                           end: Alignment.bottomLeft,
-                          colors: [Colors.teal[600], Colors.teal[200]]),
+                          colors: [Colors.teal.shade600, Colors.teal.shade200]),
                       borderRadius:
                           BorderRadius.only(bottomLeft: Radius.circular(150))),
                 ),

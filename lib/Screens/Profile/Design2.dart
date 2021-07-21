@@ -138,7 +138,7 @@ class _ProfileDesign2State extends State<ProfileDesign2> {
                         groupValue: _val3,
                         onChanged: (value) {
                           setState(() {
-                            _val3 = value;
+                            _val3 = !_val3;
                           });
                         })
                   ],
@@ -157,13 +157,15 @@ class _ProfileDesign2State extends State<ProfileDesign2> {
                     ),
                     // ignore: missing_required_param
                     Radio(
-                        activeColor: Colors.indigo[400],
-                        groupValue: _val4,
-                        onChanged: (value) {
-                          setState(() {
-                            _val4 = value;
-                          });
-                        })
+                      activeColor: Colors.indigo[400],
+                      groupValue: _val4,
+                      onChanged: (value) {
+                        setState(() {
+                          _val4 = !_val4;
+                        });
+                      },
+                      value: _val4,
+                    )
                   ],
                 ),
               )),

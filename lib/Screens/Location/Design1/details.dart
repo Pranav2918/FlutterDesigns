@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class Details extends StatelessWidget {
   final index;
 
-  const Details({Key key, @required this.index}) : super(key: key);
+  const Details({required this.index});
 
   @override
   Widget build(BuildContext context) {

@@ -59,7 +59,7 @@ class _ImageCarouselState extends State<ImageCarousel> {
 class ImageView extends StatelessWidget {
   final String imgPath;
   const ImageView({
-    @required this.imgPath,
+    required this.imgPath,
   });
 
   @override

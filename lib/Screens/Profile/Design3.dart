@@ -22,7 +22,7 @@ class ProfileDesign3 extends StatelessWidget {
                   gradient: LinearGradient(
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
-                      colors: [Colors.red, Colors.red[200]])),
+                      colors: [Colors.red, Colors.red.shade200])),
               child: Column(
                 children: [
                   Container(
@@ -57,7 +57,8 @@ class ProfileDesign3 extends StatelessWidget {
                                     fit: BoxFit.cover),
                                 borderRadius: BorderRadius.circular(50),
                                 border: Border.all(
-                                    width: 10, color: Colors.deepOrange[300]))),
+                                    width: 10,
+                                    color: Colors.deepOrange.shade300))),
                         Container(
                           margin: EdgeInsets.only(top: 20),
                           height: 60,
@@ -149,7 +150,7 @@ class ProfileDesign3 extends StatelessWidget {
                     gradient: LinearGradient(
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
-                        colors: [Colors.red, Colors.red[200]])),
+                        colors: [Colors.red, Colors.red.shade200])),
                 child: Center(
                     child: Text(
                   'Logout',

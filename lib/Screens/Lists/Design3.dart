@@ -68,12 +68,12 @@ class Item {
   final String image;
 
   Item(
-      {this.title,
-      this.category,
-      this.place,
-      this.ratings,
-      this.discount,
-      this.image});
+      {required this.title,
+      required this.category,
+      required this.place,
+      required this.ratings,
+      required this.discount,
+      required this.image});
 }
 
 class Lists extends StatelessWidget {
@@ -186,8 +186,8 @@ class Lists extends StatelessWidget {
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
                                 colors: [
-                                  Colors.deepOrange[600],
-                                  Colors.deepOrange[300]
+                                  Colors.deepOrange.shade600,
+                                  Colors.deepOrange.shade300
                                 ]))),
                     Text(item.title,
                         style: TextStyle(
