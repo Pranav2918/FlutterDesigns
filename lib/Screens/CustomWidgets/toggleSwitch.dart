@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
 class CustomToggle extends StatefulWidget {
   @override
@@ -7,27 +7,40 @@ class CustomToggle extends StatefulWidget {
 }
 
 class _CustomToggleState extends State<CustomToggle> {
-  bool mode = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: mode ? Colors.black : Colors.white,
+      backgroundColor: Colors.white,
       body: Container(
         child: Center(
-            child: LiteRollingSwitch(
-          colorOff: Colors.black,
-          colorOn: Colors.grey,
-          iconOn: Icons.lightbulb_sharp,
-          iconOff: Icons.light,
-          textOn: 'On',
-          textOff: 'Off',
-          onTap: () {
-            setState(() {
-              mode = !mode;
-            });
-          },
-          animationDuration: Duration(milliseconds: 200),
-        )),
+          child: ToggleSwitch(
+            minWidth: 90.0,
+            cornerRadius: 20.0,
+            activeBgColors: [
+              [Color.fromRGBO(0, 204, 24, 0.9)],
+              [Color.fromRGBO(255, 0, 21, 0.9)]
+            ],
+            activeFgColor: Colors.white,
+            inactiveBgColor: Colors.grey,
+            inactiveFgColor: Colors.white,
+            initialLabelIndex: 1,
+            customTextStyles: [
+              TextStyle(
+                  letterSpacing: 1.0,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w300,
+                  color: Colors.white),
+              TextStyle(
+                  letterSpacing: 1.0,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w300,
+                  color: Colors.white)
+            ],
+            totalSwitches: 2,
+            labels: ['ON', 'OFF'],
+            radiusStyle: true,
+          ),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.white,
