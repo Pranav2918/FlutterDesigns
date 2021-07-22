@@ -9,7 +9,7 @@ class TravelHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: <Widget>[HomeScreenTop(), homeScreenBottom],
+        children: <Widget>[HomeScreenTop(), homeScreenBottom(context)],
       ),
     );
   }

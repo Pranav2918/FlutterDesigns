@@ -12,7 +12,10 @@ class CityCard extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(10)),
         child: Stack(
           children: <Widget>[
-            Container(width: 160, height: 210, child: Image.network(imagePath)),
+            Container(
+                width: 160,
+                height: 210,
+                child: Image.network(imagePath, fit: BoxFit.cover)),
             Positioned(
               left: 0,
               bottom: 0,
