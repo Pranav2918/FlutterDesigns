@@ -50,9 +50,9 @@ class _PlacePageState extends State<PlacePage> {
                         ));
                   },
                   child: Icon(Icons.home)),
-              title: Text('Home')),
+              label: 'Home'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.mode_standby_rounded), title: Text('Stay here'))
+              icon: Icon(Icons.mode_standby_rounded), label:'Stay here')
         ],
       ),
     );

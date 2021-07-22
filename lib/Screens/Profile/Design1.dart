@@ -1,4 +1,3 @@
-import 'package:designs/Screens/MainScreen.dart';
 import 'package:flutter/material.dart';
 
 class ProfileDesign1 extends StatefulWidget {
