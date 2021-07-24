@@ -1,3 +1,4 @@
+import 'package:designs/Screens/Profile/Design5.dart';
 import 'package:flutter/material.dart';
 
 import 'Design1.dart';
@@ -128,6 +129,34 @@ Widget profileDesign(BuildContext context) {
                     child: Center(
                       child: Text(
                         'Freelancer Profile',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                            letterSpacing: 1.0),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => PortfoilioProfile()));
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Color.fromRGBO(0, 204, 24, 0.9),
+                        borderRadius: BorderRadius.circular(8)),
+                    margin: EdgeInsets.only(right: 15, bottom: 15, left: 15),
+                    height: 40,
+                    width: MediaQuery.of(context).size.width,
+                    child: Center(
+                      child: Text(
+                        'Portfolio Profile',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
