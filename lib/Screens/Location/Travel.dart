@@ -18,29 +18,33 @@ Widget travelDesign(BuildContext context) {
           style: TextStyle(fontSize: 16, letterSpacing: 1.0),
         ),
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Align(
-                alignment: Alignment.centerLeft,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Design1(),
-                        ));
-                  },
+          GridView.builder(
+            shrinkWrap: true,
+            primary: false,
+            itemCount: travelPages.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 1, childAspectRatio: 6.5),
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              travelPages[index]['navigate']));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
                   child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 15),
                     decoration: BoxDecoration(
                         color: Color.fromRGBO(0, 204, 24, 0.9),
                         borderRadius: BorderRadius.circular(8)),
-                    margin: EdgeInsets.only(left: 15, top: 15, right: 15),
                     height: 40,
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Travel Guide',
+                        travelPages[index]['name'],
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
@@ -49,64 +53,17 @@ Widget travelDesign(BuildContext context) {
                     ),
                   ),
                 ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Design2(),
-                      ));
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Color.fromRGBO(0, 204, 24, 0.9),
-                      borderRadius: BorderRadius.circular(8)),
-                  margin:
-                      EdgeInsets.only(right: 15, top: 15, left: 15, bottom: 15),
-                  height: 40,
-                  width: MediaQuery.of(context).size.width,
-                  child: Center(
-                    child: Text(
-                      'Place Info',
-                      style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.white,
-                          letterSpacing: 1.0),
-                    ),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => TravelHome(),
-                      ));
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Color.fromRGBO(0, 204, 24, 0.9),
-                      borderRadius: BorderRadius.circular(8)),
-                  margin: EdgeInsets.only(right: 15, left: 15, bottom: 15),
-                  height: 40,
-                  width: MediaQuery.of(context).size.width,
-                  child: Center(
-                    child: Text(
-                      'Travel Home',
-                      style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.white,
-                          letterSpacing: 1.0),
-                    ),
-                  ),
-                ),
-              ),
-            ],
+              );
+            },
           )
         ],
       ),
     ),
   );
 }
+
+final List travelPages = [
+  {'name': 'Travel Guide', 'navigate': Design1()},
+  {'name': 'Place Info', 'navigate': Design2()},
+  {'name': 'Travel Home', 'navigate': TravelHome()},
+];

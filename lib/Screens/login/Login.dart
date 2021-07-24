@@ -17,30 +17,32 @@ Widget loginDesigns(BuildContext context) {
           style: TextStyle(fontSize: 16, letterSpacing: 1.0),
         ),
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Align(
-                alignment: Alignment.centerLeft,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => LoginDesign1(),
-                        ));
-                  },
+          GridView.builder(
+            shrinkWrap: true,
+            primary: false,
+            itemCount: loginPages.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 1, childAspectRatio: 6.5),
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => loginPages[index]['navigate']));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
                   child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 15),
                     decoration: BoxDecoration(
                         color: Color.fromRGBO(0, 204, 24, 0.9),
                         borderRadius: BorderRadius.circular(8)),
-                    margin: EdgeInsets.only(
-                        left: 15, top: 15, bottom: 15, right: 15),
                     height: 40,
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
-                        'Social Login',
+                        loginPages[index]['name'],
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
@@ -49,100 +51,18 @@ Widget loginDesigns(BuildContext context) {
                     ),
                   ),
                 ),
-              ),
-              Align(
-                alignment: Alignment.centerRight,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => LoginDesign2(),
-                        ));
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Color.fromRGBO(0, 204, 24, 0.9),
-                        borderRadius: BorderRadius.circular(8)),
-                    margin: EdgeInsets.only(right: 15, left: 15),
-                    height: 40,
-                    width: MediaQuery.of(context).size.width,
-                    child: Center(
-                      child: Text(
-                        'Application Login',
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                            letterSpacing: 1.0),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => LoginDesign3(),
-                        ));
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Color.fromRGBO(0, 204, 24, 0.9),
-                        borderRadius: BorderRadius.circular(8)),
-                    margin: EdgeInsets.only(
-                        left: 15, top: 15, bottom: 15, right: 15),
-                    height: 40,
-                    width: MediaQuery.of(context).size.width,
-                    child: Center(
-                      child: Text(
-                        'E-commerce Login',
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                            letterSpacing: 1.0),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => CurvedLogin(),
-                        ));
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Color.fromRGBO(0, 204, 24, 0.9),
-                        borderRadius: BorderRadius.circular(8)),
-                    margin: EdgeInsets.only(
-                        left: 15,bottom: 15, right: 15),
-                    height: 40,
-                    width: MediaQuery.of(context).size.width,
-                    child: Center(
-                      child: Text(
-                        'Curved Design Login',
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                            letterSpacing: 1.0),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
+              );
+            },
           )
         ],
       ),
     ),
   );
 }
+
+final List loginPages = [
+  {'name': 'Social Login', 'navigate': LoginDesign1()},
+  {'name': 'Application Login', 'navigate': LoginDesign2()},
+  {'name': 'E-commerce Login', 'navigate': LoginDesign3()},
+  {'name': 'Curved Design Login', 'navigate': CurvedLogin()},
+];

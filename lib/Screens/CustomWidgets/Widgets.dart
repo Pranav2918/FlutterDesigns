@@ -19,116 +19,51 @@ Widget customWidgets(BuildContext context) {
               style: TextStyle(fontSize: 16, letterSpacing: 1.0),
             ),
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  GestureDetector(
+              GridView.builder(
+                shrinkWrap: true,
+                primary: false,
+                itemCount: widgetPages.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 1, childAspectRatio: 6.5),
+                itemBuilder: (context, index) {
+                  return GestureDetector(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => CustomToggle(),
-                          ));
+                              builder: (context) =>
+                                  widgetPages[index]['navigate']));
                     },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(0, 204, 24, 0.9),
-                          borderRadius: BorderRadius.circular(8)),
-                      margin: EdgeInsets.only(left: 15, right: 15),
-                      height: 40,
-                      width: MediaQuery.of(context).size.width,
-                      child: Center(
-                        child: Text(
-                          'Custom Toggle',
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                              letterSpacing: 1.0),
+                    child: Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Container(
+                        margin: EdgeInsets.symmetric(horizontal: 15),
+                        decoration: BoxDecoration(
+                            color: Color.fromRGBO(0, 204, 24, 0.9),
+                            borderRadius: BorderRadius.circular(8)),
+                        height: 40,
+                        width: MediaQuery.of(context).size.width,
+                        child: Center(
+                          child: Text(
+                            widgetPages[index]['name'],
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                                letterSpacing: 1.0),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => AnimatedProfile(),
-                          ));
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(0, 204, 24, 0.9),
-                          borderRadius: BorderRadius.circular(8)),
-                      margin: EdgeInsets.only(left: 15, right: 15, top: 15),
-                      height: 40,
-                      width: MediaQuery.of(context).size.width,
-                      child: Center(
-                        child: Text(
-                          'Animated Profile Picture',
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                              letterSpacing: 1.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SocialSwitches(),
-                          ));
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(0, 204, 24, 0.9),
-                          borderRadius: BorderRadius.circular(8)),
-                      margin:
-                          EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                      height: 40,
-                      width: MediaQuery.of(context).size.width,
-                      child: Center(
-                        child: Text(
-                          'Social Toggles',
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                              letterSpacing: 1.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => AnimatedToggle(),
-                          ));
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(0, 204, 24, 0.9),
-                          borderRadius: BorderRadius.circular(8)),
-                      margin: EdgeInsets.only(left: 15, right: 15, bottom: 15),
-                      height: 40,
-                      width: MediaQuery.of(context).size.width,
-                      child: Center(
-                        child: Text(
-                          'Animated Toggles',
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                              letterSpacing: 1.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+                  );
+                },
               )
             ],
           )));
 }
+
+final List widgetPages = [
+  {'name': 'Custom Toggle', 'navigate': CustomToggle()},
+  {'name': 'Animated Profile Picture', 'navigate': AnimatedProfile()},
+  {'name': 'Social Toggles', 'navigate': SocialSwitches()},
+  {'name': 'Animated Toggles', 'navigate': AnimatedToggle()},
+];
