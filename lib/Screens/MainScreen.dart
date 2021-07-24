@@ -35,7 +35,8 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text(
             'Sea of Designs',
-            style: TextStyle(letterSpacing: 1.0, fontSize: 18,fontWeight:FontWeight.w300),
+            style: TextStyle(
+                letterSpacing: 1.0, fontSize: 18, fontWeight: FontWeight.w300),
           ),
         ),
         body: SingleChildScrollView(
@@ -45,7 +46,7 @@ class _HomePageState extends State<HomePage> {
               listDesigns(context),
               loginDesigns(context),
               travelDesign(context),
-              customWidgets(context)
+              customWidgets(context),
             ],
           ),
         ));

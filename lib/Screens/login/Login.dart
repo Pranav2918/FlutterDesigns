@@ -1,5 +1,6 @@
 import 'package:designs/Screens/login/Design2.dart';
 import 'package:designs/Screens/login/Design3.dart';
+import 'package:designs/Screens/login/Design4.dart';
 import 'package:designs/Screens/login/Desing1.dart';
 import 'package:flutter/material.dart';
 
@@ -99,6 +100,36 @@ Widget loginDesigns(BuildContext context) {
                     child: Center(
                       child: Text(
                         'E-commerce Login',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                            letterSpacing: 1.0),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CurvedLogin(),
+                        ));
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Color.fromRGBO(0, 204, 24, 0.9),
+                        borderRadius: BorderRadius.circular(8)),
+                    margin: EdgeInsets.only(
+                        left: 15,bottom: 15, right: 15),
+                    height: 40,
+                    width: MediaQuery.of(context).size.width,
+                    child: Center(
+                      child: Text(
+                        'Curved Design Login',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
