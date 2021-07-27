@@ -92,6 +92,6 @@ final List animationPages = [
     'name': 'Hero Animation',
     'navigate': HeroAnimation(),
     'link':
-        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/Animations/Hero'
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/Animations/heroanimation.dart'
   }
 ];
