@@ -1,4 +1,5 @@
 import 'package:designs/Screens/Animations/animation.dart';
+import 'package:designs/Screens/Clones/clones.dart';
 import 'package:designs/Screens/CustomWidgets/Widgets.dart';
 import 'package:designs/Screens/Lists/List.dart';
 import 'package:designs/Screens/Location/Travel.dart';
@@ -67,7 +68,8 @@ class _HomePageState extends State<HomePage> {
               loginDesigns(context),
               travelDesign(context),
               customWidgets(context),
-              animationDesigns(context)
+              animationDesigns(context),
+              cloneDesigns(context)
             ],
           ),
         ));
