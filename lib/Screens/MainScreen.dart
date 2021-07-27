@@ -4,6 +4,8 @@ import 'package:designs/Screens/Location/Travel.dart';
 import 'package:designs/Screens/Profile/Profile.dart';
 import 'package:designs/Screens/login/Login.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Main extends StatefulWidget {
   @override
@@ -29,6 +31,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final String githubLink = 'https://github.com/Pranav2918';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +41,22 @@ class _HomePageState extends State<HomePage> {
             style: TextStyle(
                 letterSpacing: 1.0, fontSize: 18, fontWeight: FontWeight.w300),
           ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: IconButton(
+                onPressed: () async {
+                  try {
+                    await launch(githubLink);
+                  } on Exception catch (e) {
+                    print(e);
+                  }
+                },
+                icon: FaIcon(FontAwesomeIcons.github,
+                    size: 22, color: Colors.brown),
+              ),
+            )
+          ],
         ),
         body: SingleChildScrollView(
           child: Column(

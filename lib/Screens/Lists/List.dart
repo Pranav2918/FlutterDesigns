@@ -1,7 +1,9 @@
 import 'package:designs/Screens/Lists/Design1.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'Design3.dart';
-import 'Desing2.dart';
+import 'Design2.dart';
 
 Widget listDesigns(BuildContext context) {
   return Container(
@@ -42,12 +44,30 @@ Widget listDesigns(BuildContext context) {
                     height: 40,
                     width: MediaQuery.of(context).size.width,
                     child: Center(
-                      child: Text(
-                        listPages[index]['name'],
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                            letterSpacing: 1.0),
+                      child: Container(
+                        margin: EdgeInsets.symmetric(horizontal: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              listPages[index]['name'],
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.white,
+                                  letterSpacing: 1.0),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  try {
+                                    await launch(listPages[index]['link']);
+                                  } on Exception catch (e) {
+                                    print(e);
+                                  }
+                                },
+                                icon: FaIcon(FontAwesomeIcons.code,
+                                    color: Colors.white, size: 16))
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -62,7 +82,22 @@ Widget listDesigns(BuildContext context) {
 }
 
 final List listPages = [
-  {'name': 'School List', 'navigate': SchoolList()},
-  {'name': 'Image Grid', 'navigate': Grid()},
-  {'name': 'Place List', 'navigate': Places()}
+  {
+    'name': 'School List',
+    'navigate': SchoolList(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/Lists/Design1.dart'
+  },
+  {
+    'name': 'Image Grid',
+    'navigate': Grid(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/Lists/Design2.dart'
+  },
+  {
+    'name': 'Place List',
+    'navigate': Places(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/Lists/Design3.dart'
+  }
 ];

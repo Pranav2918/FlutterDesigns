@@ -107,7 +107,7 @@ class _GridDesignState extends State<GridDesign> {
                         GestureDetector(
                           onTap: () {
                             setState(() {
-                              onClick1 = true;
+                              onClick1 = !onClick1;
                             });
                           },
                           child: Container(
@@ -140,7 +140,7 @@ class _GridDesignState extends State<GridDesign> {
                         GestureDetector(
                           onTap: () {
                             setState(() {
-                              onClick2 = true;
+                              onClick2 = !onClick2;
                             });
                           },
                           child: Container(
@@ -173,7 +173,7 @@ class _GridDesignState extends State<GridDesign> {
                         GestureDetector(
                           onTap: () {
                             setState(() {
-                              onClick3 = true;
+                              onClick3 = !onClick3;
                             });
                           },
                           child: Container(
@@ -206,7 +206,7 @@ class _GridDesignState extends State<GridDesign> {
                         GestureDetector(
                           onTap: () {
                             setState(() {
-                              onClick4 = true;
+                              onClick4 = !onClick4;
                             });
                           },
                           child: Container(

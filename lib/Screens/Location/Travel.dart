@@ -2,6 +2,8 @@ import 'package:designs/Screens/Location/Design%202/design2.dart';
 import 'package:designs/Screens/Location/Design%203/design3.dart';
 import 'package:designs/Screens/Location/Design1/design1.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 Widget travelDesign(BuildContext context) {
   return Container(
@@ -43,12 +45,30 @@ Widget travelDesign(BuildContext context) {
                     height: 40,
                     width: MediaQuery.of(context).size.width,
                     child: Center(
-                      child: Text(
-                        travelPages[index]['name'],
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                            letterSpacing: 1.0),
+                      child: Container(
+                        margin: EdgeInsets.symmetric(horizontal: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              travelPages[index]['name'],
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.white,
+                                  letterSpacing: 1.0),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  try {
+                                    await launch(travelPages[index]['link']);
+                                  } on Exception catch (e) {
+                                    print(e);
+                                  }
+                                },
+                                icon: FaIcon(FontAwesomeIcons.code,
+                                    color: Colors.white, size: 16))
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -63,7 +83,22 @@ Widget travelDesign(BuildContext context) {
 }
 
 final List travelPages = [
-  {'name': 'Travel Guide', 'navigate': Design1()},
-  {'name': 'Place Info', 'navigate': Design2()},
-  {'name': 'Travel Home', 'navigate': TravelHome()},
+  {
+    'name': 'Travel Guide',
+    'navigate': Design1(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/tree/main/lib/Screens/Location/Design1'
+  },
+  {
+    'name': 'Place Info',
+    'navigate': Design2(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/tree/main/lib/Screens/Location/Design%202'
+  },
+  {
+    'name': 'Travel Home',
+    'navigate': TravelHome(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/tree/main/lib/Screens/Location/Design%203'
+  },
 ];

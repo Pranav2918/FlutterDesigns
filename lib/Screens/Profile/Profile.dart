@@ -1,6 +1,8 @@
 import 'package:designs/Screens/Profile/Design5.dart';
 import 'package:designs/Screens/Profile/Design6.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'Design1.dart';
 import 'Design2.dart';
@@ -47,12 +49,30 @@ Widget profileDesign(BuildContext context) {
                     height: 40,
                     width: MediaQuery.of(context).size.width,
                     child: Center(
-                      child: Text(
-                        profilePages[index]['name'],
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                            letterSpacing: 1.0),
+                      child: Container(
+                        margin: EdgeInsets.symmetric(horizontal: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              profilePages[index]['name'],
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.white,
+                                  letterSpacing: 1.0),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  try {
+                                    await launch(profilePages[index]['link']);
+                                  } on Exception catch (e) {
+                                    print(e);
+                                  }
+                                },
+                                icon: FaIcon(FontAwesomeIcons.code,
+                                    color: Colors.white, size: 16))
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -67,10 +87,40 @@ Widget profileDesign(BuildContext context) {
 }
 
 final List profilePages = [
-  {'name': 'Dating Profile', 'navigate': ProfileDesign1()},
-  {'name': 'Profile Settings', 'navigate': ProfileDesign2()},
-  {'name': 'Social Profile', 'navigate': ProfileDesign3()},
-  {'name': 'Freelancer Profile', 'navigate': ProfileDesign4()},
-  {'name': 'Portfoilio Profile 1', 'navigate': PortfoilioProfile()},
-  {'name': 'Portfolio Profile 2', 'navigate': PortfoilioProfileTwo()}
+  {
+    'name': 'Dating Profile',
+    'navigate': ProfileDesign1(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/Profile/Design1.dart'
+  },
+  {
+    'name': 'Profile Settings',
+    'navigate': ProfileDesign2(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/Profile/Design2.dart'
+  },
+  {
+    'name': 'Social Profile',
+    'navigate': ProfileDesign3(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/Profile/Design3.dart'
+  },
+  {
+    'name': 'Freelancer Profile',
+    'navigate': ProfileDesign4(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/Profile/Design4.dart'
+  },
+  {
+    'name': 'Portfoilio Profile 1',
+    'navigate': PortfoilioProfile(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/Profile/Design5.dart'
+  },
+  {
+    'name': 'Portfolio Profile 2',
+    'navigate': PortfoilioProfileTwo(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/Profile/Design6.dart'
+  }
 ];

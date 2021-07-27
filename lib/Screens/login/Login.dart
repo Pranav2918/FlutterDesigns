@@ -3,6 +3,8 @@ import 'package:designs/Screens/login/Design3.dart';
 import 'package:designs/Screens/login/Design4.dart';
 import 'package:designs/Screens/login/Desing1.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 Widget loginDesigns(BuildContext context) {
   return Container(
@@ -41,12 +43,30 @@ Widget loginDesigns(BuildContext context) {
                     height: 40,
                     width: MediaQuery.of(context).size.width,
                     child: Center(
-                      child: Text(
-                        loginPages[index]['name'],
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                            letterSpacing: 1.0),
+                      child: Container(
+                        margin: EdgeInsets.symmetric(horizontal: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              loginPages[index]['name'],
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.white,
+                                  letterSpacing: 1.0),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  try {
+                                    await launch(loginPages[index]['link']);
+                                  } on Exception catch (e) {
+                                    print(e);
+                                  }
+                                },
+                                icon: FaIcon(FontAwesomeIcons.code,
+                                    color: Colors.white, size: 16))
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -61,8 +81,28 @@ Widget loginDesigns(BuildContext context) {
 }
 
 final List loginPages = [
-  {'name': 'Social Login', 'navigate': LoginDesign1()},
-  {'name': 'Application Login', 'navigate': LoginDesign2()},
-  {'name': 'E-commerce Login', 'navigate': LoginDesign3()},
-  {'name': 'Curved Design Login', 'navigate': CurvedLogin()},
+  {
+    'name': 'Social Login',
+    'navigate': LoginDesign1(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/login/Desing1.dart'
+  },
+  {
+    'name': 'Application Login',
+    'navigate': LoginDesign2(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/login/Design2.dart'
+  },
+  {
+    'name': 'E-commerce Login',
+    'navigate': LoginDesign3(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/login/Design3.dart'
+  },
+  {
+    'name': 'Curved Design Login',
+    'navigate': CurvedLogin(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/login/Design4.dart'
+  },
 ];
