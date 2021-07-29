@@ -1,5 +1,5 @@
 import 'package:designs/Screens/Clones/Instagram/views/homepage.dart';
-import 'package:designs/Screens/Clones/Whatsapp/homepage.dart';
+import 'package:designs/Screens/Clones/Whatsapp/homeview.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';

@@ -1,4 +1,5 @@
 import 'package:designs/Screens/Clones/Whatsapp/widgets/chatlist.dart';
+import 'package:designs/Screens/Clones/Whatsapp/widgets/statusview.dart';
 import 'package:flutter/material.dart';
 
 class WhatsappClone extends StatefulWidget {
@@ -44,7 +45,7 @@ class _WhatsappCloneState extends State<WhatsappClone> {
               body: TabBarView(children: [
                 FirstScreen(),
                 ChatList(),
-                ThirdScreen(),
+                StatusScreen(),
                 FourthScreen()
               ]),
             )));
@@ -60,20 +61,6 @@ class FirstScreen extends StatelessWidget {
         'Camera Soon',
         style: TextStyle(fontSize: 32.0),
       )),
-    );
-  }
-}
-
-class ThirdScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text(
-          'Status Soon',
-          style: TextStyle(fontSize: 35.0),
-        ),
-      ),
     );
   }
 }
