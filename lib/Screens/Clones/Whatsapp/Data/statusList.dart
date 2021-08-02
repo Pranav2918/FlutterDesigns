@@ -44,7 +44,7 @@ final List status = [
     'name': 'Iron Man',
     'time': 'Today, 07:00 PM',
     'profileImg':
-        'https://www.redwolf.in/image/catalog/designer-Images/themes/iron-man-artist-image.png',
+        'https://pbs.twimg.com/profile_images/1222654825403424768/-ySQePLc_400x400.jpg',
   },
   {
     'name': 'Thor',

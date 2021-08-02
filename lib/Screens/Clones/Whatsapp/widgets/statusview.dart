@@ -2,7 +2,7 @@ import 'package:designs/Screens/Clones/Whatsapp/Data/statusList.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class StatusScreen extends StatelessWidget {
+class StatusView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String imgUrl =
