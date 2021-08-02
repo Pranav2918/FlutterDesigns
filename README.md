@@ -4,8 +4,8 @@
 
 ### Some of them
 
-<img src = "travel1.png" height="500em"/> <img src = "wp.png" height="500em"/>
-<img src = "main.png" height="500em"/> <img src = "portfolio.png" height="500em"/>
-<img src = "profile.png" height="500em"/> <img src = "travel3.png" height="500em"/>
+<img src = "screenshots/travel1.png" height="500em"/> <img src = "screenshots/wp.png" height="500em"/>
+<img src = "screenshots/main.png" height="500em"/> <img src = "screenshots/portfolio.png" height="500em"/>
+<img src = "screenshots/profile.png" height="500em"/> <img src = "screenshots/travel3.png" height="500em"/>
 
 ## FlutterDev
