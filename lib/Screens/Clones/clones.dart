@@ -81,6 +81,16 @@ Widget cloneDesigns(BuildContext context) {
 }
 
 final List clonePages = [
-  {'name': 'Instagram Clone', 'navigate': InstagramClone(), 'link': ''},
-  {'name': 'Whatsapp Clone', 'navigate': WhatsappClone(), 'link': ''}
+  {
+    'name': 'Instagram Clone',
+    'navigate': InstagramClone(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/tree/main/lib/Screens/Clones/Instagram'
+  },
+  {
+    'name': 'Whatsapp Clone',
+    'navigate': WhatsappClone(),
+    'link':
+        'https://github.com/Pranav2918/FlutterDesigns/tree/main/lib/Screens/Clones/Whatsapp'
+  }
 ];

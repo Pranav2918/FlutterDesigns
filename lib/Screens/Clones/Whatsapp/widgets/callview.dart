@@ -14,7 +14,7 @@ class CallView extends StatelessWidget {
             primary: false,
             itemBuilder: (context, index) {
               return Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(1.0),
                 child: ListTile(
                   leading: callProfilePicture(calls[index]['profileImg']),
                   title: Text(calls[index]['name']),
