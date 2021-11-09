@@ -1,5 +1,6 @@
 import 'package:designs/Screens/Profile/Design5.dart';
 import 'package:designs/Screens/Profile/Design6.dart';
+import 'package:designs/Screens/Profile/bottombar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -122,5 +123,6 @@ final List profilePages = [
     'navigate': PortfoilioProfileTwo(),
     'link':
         'https://github.com/Pranav2918/FlutterDesigns/blob/main/lib/Screens/Profile/Design6.dart'
-  }
+  },
+  {'name': 'Bottom Bar', 'navigate': BottomNav(), 'link': ''}
 ];
