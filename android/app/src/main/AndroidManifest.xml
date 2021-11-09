@@ -2,7 +2,7 @@
     package="com.example.designs">
      <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="designs"
+        android:label="Design Sea"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
