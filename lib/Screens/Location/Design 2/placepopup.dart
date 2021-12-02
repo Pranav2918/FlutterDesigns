@@ -1,3 +1,4 @@
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class PlacePopup extends StatelessWidget {
@@ -66,7 +67,7 @@ class PlacePopup extends StatelessWidget {
                     children: [
                       Container(
                         height: 155,
-                        width: MediaQuery.of(context).size.width / 2,
+                        width: screenSize(context).width / 2,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(12),

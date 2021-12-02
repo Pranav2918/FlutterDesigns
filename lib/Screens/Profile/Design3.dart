@@ -1,3 +1,4 @@
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class ProfileDesign3 extends StatelessWidget {
@@ -16,8 +17,8 @@ class ProfileDesign3 extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 3.5,
+              width: screenSize(context).width,
+              height: screenSize(context).height / 3.5,
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.centerLeft,

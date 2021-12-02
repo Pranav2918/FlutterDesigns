@@ -1,6 +1,7 @@
 import 'package:designs/Screens/Profile/Design5.dart';
 import 'package:designs/Screens/Profile/Design6.dart';
 import 'package:designs/Screens/Profile/bottombar.dart';
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -48,7 +49,7 @@ Widget profileDesign(BuildContext context) {
                         color: Color.fromRGBO(0, 204, 24, 0.9),
                         borderRadius: BorderRadius.circular(8)),
                     height: 40,
-                    width: MediaQuery.of(context).size.width,
+                    width: screenSize(context).width,
                     child: Center(
                       child: Container(
                         margin: EdgeInsets.symmetric(horizontal: 10),

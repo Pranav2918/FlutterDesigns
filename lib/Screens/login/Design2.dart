@@ -1,3 +1,4 @@
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class LoginDesign2 extends StatelessWidget {
@@ -8,11 +9,10 @@ class LoginDesign2 extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-              height: MediaQuery.of(context).size.height / 2,
+              height: screenSize(context).height / 2,
               color: Color.fromRGBO(255, 0, 21, 0.9)),
           Container(
-            margin:
-                EdgeInsets.only(top: MediaQuery.of(context).size.height / 8.5),
+            margin: EdgeInsets.only(top: screenSize(context).height / 8.5),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -31,11 +31,9 @@ class LoginDesign2 extends StatelessWidget {
           Container(
               height: 350,
               color: Colors.white,
-              width: MediaQuery.of(context).size.width,
+              width: screenSize(context).width,
               margin: EdgeInsets.only(
-                  left: 15,
-                  right: 15,
-                  top: MediaQuery.of(context).size.height / 2.9),
+                  left: 15, right: 15, top: screenSize(context).height / 2.9),
               child: Column(
                 children: [
                   Container(

@@ -1,3 +1,4 @@
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class ProfileDesign2 extends StatefulWidget {
@@ -44,8 +45,8 @@ class _ProfileDesign2State extends State<ProfileDesign2> {
                 ),
               ),
               Positioned(
-                left: MediaQuery.of(context).size.width / 1.9,
-                top: MediaQuery.of(context).size.height / 8.8,
+                left: screenSize(context).width / 1.9,
+                top: screenSize(context).height / 8.8,
                 child: Container(
                   height: 30,
                   width: 30,
@@ -172,7 +173,7 @@ class _ProfileDesign2State extends State<ProfileDesign2> {
               margin: EdgeInsets.only(left: 55),
               child: Divider(height: 2, color: Colors.black)),
           Container(
-            width: MediaQuery.of(context).size.width,
+            width: screenSize(context).width,
             margin: EdgeInsets.only(left: 10),
             child: ListTile(
               contentPadding: EdgeInsets.all(0.0),
@@ -183,7 +184,7 @@ class _ProfileDesign2State extends State<ProfileDesign2> {
             ),
           ),
           Container(
-            width: MediaQuery.of(context).size.width,
+            width: screenSize(context).width,
             margin: EdgeInsets.only(left: 10),
             child: ListTile(
               contentPadding: EdgeInsets.all(0.0),
@@ -194,7 +195,7 @@ class _ProfileDesign2State extends State<ProfileDesign2> {
             ),
           ),
           Container(
-            width: MediaQuery.of(context).size.width,
+            width: screenSize(context).width,
             margin: EdgeInsets.only(left: 10),
             child: ListTile(
               contentPadding: EdgeInsets.all(0.0),

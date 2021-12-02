@@ -1,3 +1,4 @@
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class CurvedLogin extends StatelessWidget {
@@ -11,7 +12,7 @@ class CurvedLogin extends StatelessWidget {
         Stack(
           children: [
             Container(
-                height: MediaQuery.of(context).size.height / 1.9,
+                height: screenSize(context).height / 1.9,
                 decoration: BoxDecoration(
                     gradient: LinearGradient(colors: [
                       Color.fromRGBO(255, 102, 102, 0.9),
@@ -91,7 +92,7 @@ class CurvedLogin extends StatelessWidget {
           },
           child: Container(
             height: 40,
-            width: MediaQuery.of(context).size.width,
+            width: screenSize(context).width,
             margin: EdgeInsets.only(left: 30, right: 30),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(28),

@@ -1,3 +1,4 @@
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class LoginDesign3 extends StatelessWidget {
@@ -7,15 +8,15 @@ class LoginDesign3 extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
+              width: screenSize(context).width,
+              height: screenSize(context).height,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('assets/images/bg.jpg'),
                       fit: BoxFit.cover))),
           Container(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
+            height: screenSize(context).height,
+            width: screenSize(context).width,
             color: Colors.white.withOpacity(0.6),
           ),
           Align(

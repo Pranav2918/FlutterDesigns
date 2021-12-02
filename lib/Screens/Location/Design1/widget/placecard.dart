@@ -1,5 +1,6 @@
 import 'package:designs/Screens/Location/Design1/data/placelist.dart';
 import 'package:designs/Screens/Location/Design1/details.dart';
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class PlaceCard extends StatelessWidget {
@@ -21,7 +22,7 @@ class PlaceCard extends StatelessWidget {
           child: Container(
               margin: EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 15),
               height: 200,
-              width: MediaQuery.of(context).size.width,
+              width: screenSize(context).width,
               child: Stack(
                 children: <Widget>[
                   Container(

@@ -1,4 +1,5 @@
 import 'package:designs/Screens/Clones/Instagram/widget/instastory.dart';
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -11,13 +12,12 @@ class _InstaListState extends State<InstaList> {
   bool isPressed = false;
   @override
   Widget build(BuildContext context) {
-    var deviceSize = MediaQuery.of(context).size;
     return ListView.builder(
       itemCount: 6,
       itemBuilder: (context, index) => index == 0
           ? new SizedBox(
               child: InstaStory(),
-              height: deviceSize.height * 0.20,
+              height: screenSize(context).height * 0.20,
             )
           : Column(
               mainAxisAlignment: MainAxisAlignment.start,

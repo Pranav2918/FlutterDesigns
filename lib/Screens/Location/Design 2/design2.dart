@@ -1,5 +1,6 @@
 import 'package:designs/Screens/Location/Design%202/carousel.dart';
 import 'package:designs/Screens/Location/Design%202/placepopup.dart';
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class Design2 extends StatelessWidget {
@@ -18,7 +19,7 @@ class Design2 extends StatelessWidget {
           children: <Widget>[
             Container(
                 height: 250,
-                width: MediaQuery.of(context).size.width,
+                width: screenSize(context).width,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: NetworkImage(img), fit: BoxFit.cover))),
@@ -57,7 +58,7 @@ class Design2 extends StatelessWidget {
                     color: Colors.white.withOpacity(0.2),
                     margin: EdgeInsets.only(left: 15, right: 15),
                     height: 300,
-                    width: MediaQuery.of(context).size.width,
+                    width: screenSize(context).width,
                     child: Container(
                         margin: EdgeInsets.only(top: 25),
                         child: ImageCarousel()),

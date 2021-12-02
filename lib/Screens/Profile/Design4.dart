@@ -1,3 +1,4 @@
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class ProfileDesign4 extends StatelessWidget {
@@ -11,8 +12,8 @@ class ProfileDesign4 extends StatelessWidget {
             children: [
               Container(
                   color: Colors.deepOrange,
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height / 2.2,
+                  width: screenSize(context).width,
+                  height: screenSize(context).height / 2.2,
                   child: Center(
                     child: Column(
                       children: [
@@ -58,9 +59,9 @@ class ProfileDesign4 extends StatelessWidget {
                     left: 15,
                     right: 15,
                     bottom: 15,
-                    top: MediaQuery.of(context).size.height / 2.5),
+                    top: screenSize(context).height / 2.5),
                 height: 100,
-                width: MediaQuery.of(context).size.width,
+                width: screenSize(context).width,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     color: Colors.white,
@@ -107,8 +108,8 @@ class ProfileDesign4 extends StatelessWidget {
                 margin: EdgeInsets.only(
                     left: 15,
                     right: 15,
-                    top: MediaQuery.of(context).size.height / 1.85),
-                width: MediaQuery.of(context).size.width,
+                    top: screenSize(context).height / 1.85),
+                width: screenSize(context).width,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     color: Colors.white,

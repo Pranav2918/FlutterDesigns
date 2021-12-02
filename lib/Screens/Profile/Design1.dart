@@ -1,3 +1,4 @@
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class ProfileDesign1 extends StatefulWidget {
@@ -25,7 +26,7 @@ class _ProfileDesign1State extends State<ProfileDesign1> {
             Stack(
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.width,
+                  width: screenSize(context).width,
                   height: 280,
                   decoration: BoxDecoration(
                       image: DecorationImage(
@@ -50,7 +51,7 @@ class _ProfileDesign1State extends State<ProfileDesign1> {
               ],
             ),
             Container(
-              width: MediaQuery.of(context).size.width,
+              width: screenSize(context).width,
               margin: EdgeInsets.only(top: 15, left: 15, right: 15),
               child: TextFormField(
                 decoration: InputDecoration(
@@ -66,7 +67,7 @@ class _ProfileDesign1State extends State<ProfileDesign1> {
               ),
             ),
             Container(
-              width: MediaQuery.of(context).size.width,
+              width: screenSize(context).width,
               margin: EdgeInsets.only(top: 15, left: 15, right: 15),
               child: TextFormField(
                 decoration: InputDecoration(
@@ -82,7 +83,7 @@ class _ProfileDesign1State extends State<ProfileDesign1> {
               ),
             ),
             Container(
-              width: MediaQuery.of(context).size.width,
+              width: screenSize(context).width,
               margin: EdgeInsets.only(top: 15, left: 15, right: 15),
               child: TextFormField(
                 decoration: InputDecoration(
@@ -107,7 +108,7 @@ class _ProfileDesign1State extends State<ProfileDesign1> {
             ),
             Container(
               margin: EdgeInsets.only(top: 15, left: 15),
-              width: MediaQuery.of(context).size.width,
+              width: screenSize(context).width,
               child: Row(
                 children: [
                   Container(
@@ -194,7 +195,7 @@ class _ProfileDesign1State extends State<ProfileDesign1> {
             ),
             Container(
               margin: EdgeInsets.only(top: 15, left: 15, right: 15, bottom: 20),
-              width: MediaQuery.of(context).size.width,
+              width: screenSize(context).width,
               height: 40,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(28),

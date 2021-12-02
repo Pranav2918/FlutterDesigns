@@ -1,3 +1,4 @@
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class HeroAnimation extends StatelessWidget {
@@ -51,8 +52,8 @@ class HeroDemo extends StatelessWidget {
         tag: "DemoTag",
         child: Center(
             child: Container(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
+                height: screenSize(context).height,
+                width: screenSize(context).width,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                       image: NetworkImage(imgUrl), fit: BoxFit.cover),

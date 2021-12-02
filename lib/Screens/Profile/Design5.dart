@@ -1,3 +1,4 @@
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -16,8 +17,8 @@ class PortfoilioProfile extends StatelessWidget {
                   image: DecorationImage(
                       image: NetworkImage(bgImg), fit: BoxFit.cover))),
           Container(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
+              height: screenSize(context).height,
+              width: screenSize(context).width,
               color: Colors.black.withOpacity(0.6)),
           Container(
             margin: EdgeInsets.only(top: 80, left: 15),
@@ -87,7 +88,7 @@ class PortfoilioProfile extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width,
+                  width: screenSize(context).width,
                   child: _buildProjectScroller(),
                 ),
                 GestureDetector(
@@ -96,7 +97,7 @@ class PortfoilioProfile extends StatelessWidget {
                   },
                   child: Container(
                     height: 40,
-                    width: MediaQuery.of(context).size.width,
+                    width: screenSize(context).width,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         gradient: LinearGradient(

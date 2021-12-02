@@ -1,3 +1,4 @@
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class LoginDesign1 extends StatelessWidget {
@@ -10,7 +11,7 @@ class LoginDesign1 extends StatelessWidget {
             Stack(
               children: [
                 Container(
-                  height: MediaQuery.of(context).size.height / 2,
+                  height: screenSize(context).height / 2,
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                           begin: Alignment.topRight,
@@ -52,7 +53,7 @@ class LoginDesign1 extends StatelessWidget {
             ),
             Container(
               height: 40,
-              width: MediaQuery.of(context).size.width,
+              width: screenSize(context).width,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(28),
                   color: Colors.grey[300]),
@@ -71,7 +72,7 @@ class LoginDesign1 extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(left: 20, right: 20, top: 8),
               height: 40,
-              width: MediaQuery.of(context).size.width,
+              width: screenSize(context).width,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(28),
                   color: Colors.grey[300]),

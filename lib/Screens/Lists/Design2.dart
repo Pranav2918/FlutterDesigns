@@ -1,4 +1,5 @@
 import 'package:designs/Screens/MainScreen.dart';
+import 'package:designs/utils/sizer.dart';
 
 import 'package:flutter/material.dart';
 
@@ -56,7 +57,7 @@ class _GridDesignState extends State<GridDesign> {
                         image: NetworkImage(img), fit: BoxFit.cover),
                     borderRadius: BorderRadius.circular(28)),
                 height: 300,
-                width: MediaQuery.of(context).size.width,
+                width: screenSize(context).width,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -77,7 +78,7 @@ class _GridDesignState extends State<GridDesign> {
                       ),
                       margin: EdgeInsets.only(bottom: 15, left: 15, right: 15),
                       height: 40,
-                      width: MediaQuery.of(context).size.width,
+                      width: screenSize(context).width,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(28),
                           color: Colors.white),
@@ -101,7 +102,7 @@ class _GridDesignState extends State<GridDesign> {
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(20)),
                     height: 55,
-                    width: MediaQuery.of(context).size.width / 2,
+                    width: screenSize(context).width / 2,
                     child: Stack(
                       children: [
                         GestureDetector(
@@ -129,7 +130,7 @@ class _GridDesignState extends State<GridDesign> {
                   Container(
                     margin: EdgeInsets.only(right: 15),
                     height: 55,
-                    width: MediaQuery.of(context).size.width / 2,
+                    width: screenSize(context).width / 2,
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage(grid2), fit: BoxFit.cover),
@@ -162,7 +163,7 @@ class _GridDesignState extends State<GridDesign> {
                   Container(
                     margin: EdgeInsets.only(left: 15),
                     height: 55,
-                    width: MediaQuery.of(context).size.width / 2,
+                    width: screenSize(context).width / 2,
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage(grid3), fit: BoxFit.cover),
@@ -195,7 +196,7 @@ class _GridDesignState extends State<GridDesign> {
                   Container(
                     margin: EdgeInsets.only(right: 15),
                     height: 55,
-                    width: MediaQuery.of(context).size.width / 2,
+                    width: screenSize(context).width / 2,
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage(grid4), fit: BoxFit.cover),
@@ -241,7 +242,7 @@ class _GridDesignState extends State<GridDesign> {
                           style: TextStyle(color: Colors.white, fontSize: 18))),
                   margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                   height: 40,
-                  width: MediaQuery.of(context).size.width,
+                  width: screenSize(context).width,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.black),

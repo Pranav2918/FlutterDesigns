@@ -1,3 +1,4 @@
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class SchoolList extends StatefulWidget {
@@ -64,13 +65,13 @@ class _SchoolListState extends State<SchoolList> {
       backgroundColor: Color(0xfff0f0f0),
       body: SingleChildScrollView(
         child: Container(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
+          height: screenSize(context).height,
+          width: screenSize(context).width,
           child: Stack(
             children: <Widget>[
               Container(
                 padding: EdgeInsets.only(top: 145),
-                height: MediaQuery.of(context).size.height,
+                height: screenSize(context).height,
                 width: double.infinity,
                 child: ListView.builder(
                     itemCount: schoolLists.length,

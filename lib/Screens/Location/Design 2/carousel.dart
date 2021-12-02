@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:designs/utils/sizer.dart';
 import 'package:flutter/material.dart';
 
 class ImageCarousel extends StatefulWidget {
@@ -66,7 +67,7 @@ class ImageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      width: MediaQuery.of(context).size.width,
+      width: screenSize(context).width,
       margin: EdgeInsets.symmetric(horizontal: 8),
       child: FittedBox(fit: BoxFit.fill, child: Image.asset(imgPath)),
     );
