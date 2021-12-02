@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:designs/Screens/MainScreen.dart';
 import 'package:designs/Screens/splash.dart';
+import 'package:designs/homescreen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
       routes: <String, WidgetBuilder>{
-        '/Main': (BuildContext context) => Main()
+        '/Main': (BuildContext context) => LoginScreen()
       },
       theme: ThemeData(primaryColor: Colors.white),
     );
