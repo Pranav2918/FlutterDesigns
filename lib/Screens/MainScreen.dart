@@ -5,6 +5,7 @@ import 'package:designs/Screens/Lists/List.dart';
 import 'package:designs/Screens/Location/Travel.dart';
 import 'package:designs/Screens/Profile/Profile.dart';
 import 'package:designs/Screens/login/Login.dart';
+import 'package:designs/services/authservices.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -44,20 +45,14 @@ class _HomePageState extends State<HomePage> {
                 letterSpacing: 1.0, fontSize: 18, fontWeight: FontWeight.w300),
           ),
           actions: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: IconButton(
-                onPressed: () async {
-                  try {
-                    await launch(githubLink);
-                  } on Exception catch (e) {
-                    print(e);
-                  }
+            IconButton(
+                onPressed: () {
+                  AuthService().signOut();
                 },
-                icon: FaIcon(FontAwesomeIcons.github,
-                    size: 22, color: Colors.brown),
-              ),
-            )
+                icon: Icon(
+                  Icons.logout,
+                  color: Colors.black,
+                ))
           ],
         ),
         body: SingleChildScrollView(

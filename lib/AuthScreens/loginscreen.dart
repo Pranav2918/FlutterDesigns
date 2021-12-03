@@ -1,4 +1,7 @@
-import 'package:designs/Screens/MainScreen.dart';
+import 'package:designs/AuthScreens/signupscreen.dart';
+import 'package:designs/services/authservices.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -7,9 +10,20 @@ class LoginScreen extends StatefulWidget {
 }
 
 class LoginScreenState extends State<LoginScreen> {
+  User? user;
   TextEditingController passwordController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+
+  checkFields() {
+    final form = _formKey.currentState;
+    if (form!.validate()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +58,7 @@ class LoginScreenState extends State<LoginScreen> {
               Container(
                 margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: TextFormField(
+                  obscureText: true,
                   controller: passwordController,
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -63,15 +78,8 @@ class LoginScreenState extends State<LoginScreen> {
                 padding: const EdgeInsets.fromLTRB(25, 35, 25, 10),
                 child: ElevatedButton(
                   onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => Main(),
-                          ));
-                    } else {
-                      print('Wrong');
-                    }
+                    AuthService()
+                        .signIn(emailController.text, passwordController.text);
                   },
                   child: Text("Login"),
                   style: ElevatedButton.styleFrom(primary: Colors.red),
@@ -80,8 +88,13 @@ class LoginScreenState extends State<LoginScreen> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(25, 0, 25, 10),
                 child: ElevatedButton(
-                    onPressed: () {}, child: Text('Sign in with Google')),
-              )
+                    onPressed: () {
+                      AuthService.signInWithGoogleMobile(context: context);
+                      print(user!.displayName);
+                    },
+                    child: Text('Google SignIn')),
+              ),
+              loginBottomTextWidget(context)
             ],
           )),
         ),
@@ -93,6 +106,14 @@ class LoginScreenState extends State<LoginScreen> {
 //Widgets
 AppBar appBar() {
   return AppBar(
+    leading: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Image.asset(
+        "assets/images/logo.png",
+        height: 50,
+        width: 50,
+      ),
+    ),
     title: Text("Login"),
     backgroundColor: Colors.black,
   );
@@ -100,4 +121,29 @@ AppBar appBar() {
 
 Widget inputText(String text) {
   return Text(text, style: TextStyle(color: Colors.grey, fontSize: 18));
+}
+
+Widget loginBottomTextWidget(BuildContext context) {
+  return Container(
+      alignment: Alignment.center,
+      margin: const EdgeInsets.only(top: 35),
+      child: RichText(
+        text: TextSpan(
+            text: "Don\'t have an account? ",
+            style: const TextStyle(color: Colors.grey, fontSize: 18),
+            children: <TextSpan>[
+              TextSpan(
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SignupScreen(),
+                        ));
+                  },
+                text: 'Sign Up',
+                style: const TextStyle(color: Colors.blue, fontSize: 18),
+              )
+            ]),
+      ));
 }

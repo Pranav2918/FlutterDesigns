@@ -1,10 +1,16 @@
 import 'dart:async';
 
 import 'package:designs/Screens/splash.dart';
-import 'package:designs/homescreen.dart';
+import 'package:designs/AuthScreens/loginscreen.dart';
+import 'package:designs/services/authservices.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget {
   @override
@@ -16,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: AuthService().handleAuth(),
       routes: <String, WidgetBuilder>{
         '/Main': (BuildContext context) => LoginScreen()
       },
