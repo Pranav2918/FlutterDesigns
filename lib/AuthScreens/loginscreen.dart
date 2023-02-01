@@ -78,8 +78,7 @@ class LoginScreenState extends State<LoginScreen> {
                 padding: const EdgeInsets.fromLTRB(25, 35, 25, 10),
                 child: ElevatedButton(
                   onPressed: () {
-                    AuthService()
-                        .signIn(emailController.text, passwordController.text);
+                    AuthService.signIn(emailController.text, passwordController.text);
                   },
                   child: Text("Login"),
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.red),

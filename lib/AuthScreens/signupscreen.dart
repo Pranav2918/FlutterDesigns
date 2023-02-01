@@ -100,8 +100,8 @@ class _SignupScreenState extends State<SignupScreen> {
                 padding: const EdgeInsets.fromLTRB(25, 35, 25, 10),
                 child: ElevatedButton(
                   onPressed: () {
-                    AuthService()
-                        .signUp(emailController.text, passwordController.text);
+                    AuthService.signUp(
+                        emailController.text, passwordController.text);
                     Timer(Duration(milliseconds: 1000), popNavigator(context));
                   },
                   child: Text("Sign up"),

@@ -26,7 +26,7 @@ class AuthService {
   }
 
   //Sign in
-  signIn(email, password) {
+  static void signIn(email, password) {
     FirebaseAuth.instance
         .signInWithEmailAndPassword(email: email, password: password)
         .then((user) {})
@@ -36,7 +36,7 @@ class AuthService {
   }
 
   //Register
-  signUp(email, password) {
+  static void signUp(email, password) {
     FirebaseAuth.instance
         .createUserWithEmailAndPassword(email: email, password: password)
         .then((user) {})
