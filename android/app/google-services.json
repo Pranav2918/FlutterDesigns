@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "50620599446",
-    "project_id": "designsea-4a229",
-    "storage_bucket": "designsea-4a229.appspot.com"
+    "project_number": "884668184717",
+    "project_id": "flutterdesigns-e530e",
+    "storage_bucket": "flutterdesigns-e530e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:50620599446:android:e58b7b13de369e19c586b7",
+        "mobilesdk_app_id": "1:884668184717:android:9a971a795895f6d4304ac4",
         "android_client_info": {
           "package_name": "com.android.application"
         }
       },
       "oauth_client": [
         {
-          "client_id": "50620599446-4am7qde3q4nknlsle6n219l59rcd7qgh.apps.googleusercontent.com",
+          "client_id": "884668184717-l05bm0n7eqleseeq4k3ti0efu2lhpkom.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.android.application",
-            "certificate_hash": "3d569fd6786649fb08afe31aa29a112e118426fd"
+            "certificate_hash": "8f38231e023ecdd49c7dfe7200d032b80c447ca5"
           }
         },
         {
-          "client_id": "50620599446-3g0g7tc57i5a8cb3g4v1q6usou3slssi.apps.googleusercontent.com",
+          "client_id": "884668184717-npr46d61qup166v2t36h6b1kus6r4qph.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDZvtAyNfG-DR6EC90l8umBFLPDweYI2eQ"
+          "current_key": "AIzaSyD5rWsDrS51VmHdXthmqE1FJTYdQ7eMq3Y"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "50620599446-3g0g7tc57i5a8cb3g4v1q6usou3slssi.apps.googleusercontent.com",
+              "client_id": "884668184717-hk908d1dbuld6jv61js1m2jm0rm2ugiv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
