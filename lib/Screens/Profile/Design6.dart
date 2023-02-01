@@ -13,7 +13,7 @@ class PortfoilioProfileTwo extends StatelessWidget {
           padding: const EdgeInsets.only(right: 35.0, top: 15, bottom: 15),
           child: InkWell(
               onTap: () async {
-                await launch('https://github.com/Pranav2918');
+                await launchUrl(Uri.parse('https://github.com/Pranav2918'));
               },
               child: FaIcon(FontAwesomeIcons.github)),
         ),

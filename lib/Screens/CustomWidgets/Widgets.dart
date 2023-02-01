@@ -62,7 +62,7 @@ Widget customWidgets(BuildContext context) {
                                 IconButton(
                                     onPressed: () async {
                                       try {
-                                        await launch(
+                                        await launchUrl(
                                             widgetPages[index]['link']);
                                       } on Exception catch (e) {
                                         print(e);

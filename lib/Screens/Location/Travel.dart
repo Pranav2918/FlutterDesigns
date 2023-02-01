@@ -61,7 +61,7 @@ Widget travelDesign(BuildContext context) {
                             IconButton(
                                 onPressed: () async {
                                   try {
-                                    await launch(travelPages[index]['link']);
+                                    await launchUrl(travelPages[index]['link']);
                                   } on Exception catch (e) {
                                     print(e);
                                   }

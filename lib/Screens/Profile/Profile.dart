@@ -66,7 +66,7 @@ Widget profileDesign(BuildContext context) {
                             IconButton(
                                 onPressed: () async {
                                   try {
-                                    await launch(profilePages[index]['link']);
+                                    await launchUrl(profilePages[index]['link']);
                                   } on Exception catch (e) {
                                     print(e);
                                   }

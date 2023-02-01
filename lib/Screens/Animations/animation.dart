@@ -60,7 +60,7 @@ Widget animationDesigns(BuildContext context) {
                             IconButton(
                                 onPressed: () async {
                                   try {
-                                    await launch(animationPages[index]['link']);
+                                    await launchUrl(animationPages[index]['link']);
                                   } on Exception catch (e) {
                                     print(e);
                                   }

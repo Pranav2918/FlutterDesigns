@@ -199,7 +199,7 @@ Widget _buildProjectScroller() {
                   InkWell(
                     onTap: () async {
                       try {
-                        await launch(projects[index]['link']);
+                        await launchUrl(projects[index]['link']);
                       } on Exception catch (e) {
                         print(e);
                       }
