@@ -105,7 +105,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     Timer(Duration(milliseconds: 1000), popNavigator(context));
                   },
                   child: Text("Sign up"),
-                  style: ElevatedButton.styleFrom(primary: Colors.red),
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                 ),
               ),
               signupBottomTextWidget()

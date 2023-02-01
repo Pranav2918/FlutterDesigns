@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:designs/Screens/Location/Design1/data/placelist.dart';
 import 'package:flutter/material.dart';
 

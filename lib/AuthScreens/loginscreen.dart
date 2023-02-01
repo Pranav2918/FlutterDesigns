@@ -82,7 +82,7 @@ class LoginScreenState extends State<LoginScreen> {
                         .signIn(emailController.text, passwordController.text);
                   },
                   child: Text("Login"),
-                  style: ElevatedButton.styleFrom(primary: Colors.red),
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                 ),
               ),
               Padding(
