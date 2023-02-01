@@ -116,39 +116,37 @@ class _SchoolListState extends State<SchoolList> {
                   ),
                 ),
               ),
-              Container(
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(
-                      height: 110,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: Material(
-                        elevation: 5.0,
-                        borderRadius: BorderRadius.all(Radius.circular(30)),
-                        child: TextField(
-                          // controller: TextEditingController(text: locations[0]),
-                          cursorColor: Theme.of(context).primaryColor,
-                          style: dropdownMenuItem,
-                          decoration: InputDecoration(
-                              hintText: "Search School",
-                              hintStyle: TextStyle(
-                                  color: Colors.black38, fontSize: 16),
-                              prefixIcon: Material(
-                                elevation: 0.0,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(30)),
-                                child: Icon(Icons.search),
-                              ),
-                              border: InputBorder.none,
-                              contentPadding: EdgeInsets.symmetric(
-                                  horizontal: 25, vertical: 13)),
-                        ),
+              Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 110,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                      child: TextField(
+                        // controller: TextEditingController(text: locations[0]),
+                        cursorColor: Theme.of(context).primaryColor,
+                        style: dropdownMenuItem,
+                        decoration: InputDecoration(
+                            hintText: "Search School",
+                            hintStyle:
+                                TextStyle(color: Colors.black38, fontSize: 16),
+                            prefixIcon: Material(
+                              elevation: 0.0,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(30)),
+                              child: Icon(Icons.search),
+                            ),
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.symmetric(
+                                horizontal: 25, vertical: 13)),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               )
             ],
           ),
@@ -164,7 +162,6 @@ class _SchoolListState extends State<SchoolList> {
         color: Colors.white,
       ),
       width: double.infinity,
-      height: 110,
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       child: Row(

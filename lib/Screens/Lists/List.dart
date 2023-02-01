@@ -60,7 +60,7 @@ Widget listDesigns(BuildContext context) {
                             IconButton(
                                 onPressed: () async {
                                   try {
-                                    await launchUrl(listPages[index]['link']);
+                                    await launchUrl(Uri.parse(listPages[index]['link']));
                                   } on Exception catch (e) {
                                     print(e);
                                   }

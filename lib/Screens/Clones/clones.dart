@@ -59,7 +59,7 @@ Widget cloneDesigns(BuildContext context) {
                             IconButton(
                                 onPressed: () async {
                                   try {
-                                    await launchUrl(clonePages[index]['link']);
+                                    await launchUrl(Uri.parse(clonePages[index]['link']));
                                   } on Exception catch (e) {
                                     print(e);
                                   }

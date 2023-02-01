@@ -59,7 +59,7 @@ Widget loginDesigns(BuildContext context) {
                             IconButton(
                                 onPressed: () async {
                                   try {
-                                    await launchUrl(loginPages[index]['link']);
+                                    await launchUrl(Uri.parse(loginPages[index]['link']));
                                   } on Exception catch (e) {
                                     print(e);
                                   }
